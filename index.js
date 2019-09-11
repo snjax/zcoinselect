@@ -18,7 +18,7 @@ function zcoinselect(coins, amount) {
 
   let i = coins.length - 2;
   let d = 1;
-  while (i >= 0) {
+  while (i > 0) {
     if (s(i - 1, d)) {
       i -= 1;
     } else if (s(i - 1, d + 1)) {
