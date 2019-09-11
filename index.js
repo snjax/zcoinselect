@@ -1,6 +1,6 @@
 
 
-exports = zcoinselect;
+module.exports = zcoinselect;
 
 const maxAmount = coins => coins.slice(-2).reduce((a, b) => a[1] + b[1]);
 
