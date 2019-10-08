@@ -6,8 +6,10 @@ module.exports = zcoinselect;
 
 
 function measure(v1, v2, v3) {
+  const v0 = [v3[0]>>1n, v3[1]>>1n];
+
   const p1 = (v1[0] > 0n ? 4 : 0) + (v2[0] > 0n ? 4 : 0) + v1[2] + v2[2];
-  const p2 = (v1[0] + v2[0] - v3[0]) ** 2n + (v1[1] + v2[1] - v3[1]) ** 2n
+  const p2 = (v1[0] - v0[0])**2n + (v2[0] - v0[0]) ** 2n + (v1[1] - v0[1])**2n + (v2[1] - v0[1]) ** 2n
   return [p1, p2]
 }
 
